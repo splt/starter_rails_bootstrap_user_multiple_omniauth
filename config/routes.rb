@@ -1,10 +1,16 @@
 ParkerBarker::Application.routes.draw do
-  
+
   root :to => 'static#index'
 
   ActiveAdmin.routes(self)
 
+  devise_for :users
+
   devise_for :admin_users, ActiveAdmin::Devise.config
+
+  devise_scope :user do
+    get "sign_in", :to => "devise/sessions#new"
+  end
 
   
   
