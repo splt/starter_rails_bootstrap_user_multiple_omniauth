@@ -1,0 +1,22 @@
+<% if user_signed_in? %>
+	<div class="dropdown">
+        <a href="#" class="dropdown-toggle btn" data-toggle="dropdown"><%= current_user.email %> <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Another action</a></li>
+          <li><%= link_to('Edit account', edit_user_registration_path) %></li>
+          <li class="divider"></li>
+           <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+        </ul>
+     </div>
+<% else %>
+<ul class="pull-right nav">
+	<li>
+	<%= form_for("user", :url => user_session_path, :html => {:class => "navbar-form pull-right"}) do |f| %>
+	  <%= f.text_field :email, :class => "span2", :placeholder => "Email" %>
+	  <%= f.password_field :password, :class => "span2", :placeholder => "Password" %>
+	  <%= f.submit 'Sign in', :class => "btn" %>
+	<% end %>
+	</li>
+</ul>
+<% end %>
+

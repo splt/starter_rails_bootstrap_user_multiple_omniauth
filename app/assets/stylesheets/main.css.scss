@@ -1,4 +1,5 @@
 @import "bootstrap";
+body { padding-top: 60px; }
 @import "bootstrap-responsive";
 
 /* mixins, variables, etc. */
@@ -19,7 +20,6 @@ html {
 }
 
 body {
-  .padding-top: 60px;
   background:$grayLighter;
 }
 
@@ -82,6 +82,12 @@ p {
     color: white;
     text-decoration: none;
   }
+}
+
+/* body */
+
+#wrapper{
+  .margin-top:60px;
 }
 
 /* footer */
