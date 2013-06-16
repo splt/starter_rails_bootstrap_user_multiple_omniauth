@@ -13,16 +13,17 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
   	<meta name="keywords" content="" />
-	<meta property="og:image" content=""/>
-	<meta property="og:title" content=""/>
-	<meta property="og:url" content=""/>
+	
+	<meta property="og:image" content="<%= content_for?(:fbimage) ? yield(:fbimage) : 'http://placehold.it/50x50' %>"/>
+	<meta property="og:title" content="<%= content_for?(:fbtitle) ? yield(:fbtitle) : 'Compact' %>"/>
+	<meta property="og:url" content="<%= content_for?(:fburl) ? yield(:fburl) : 'Compact' %>"/>
 	<meta property="og:site_name" content=""/>
 	<meta property="og:type" content=""/>
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="">
-    <link rel="apple-touch-icon-precomposed" href="">
-    <link rel="shortcut icon" href="">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://placehold.it/144x144">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://placehold.it/114x114">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://placehold.it/72x72">
+    <link rel="apple-touch-icon-precomposed" href="http://placehold.it/50x50">
 	
 	<%= stylesheet_link_tag    "application", :media => "all" %>
   	<%= csrf_meta_tags %>
