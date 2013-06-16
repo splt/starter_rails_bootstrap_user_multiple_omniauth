@@ -1,0 +1,6 @@
+
+<%= form_for("user", :url => user_session_path, :html => {:class => "navbar-form"}) do |f| %>
+  <%= f.text_field :email, :class => "span2", :placeholder => "Email" %>
+  <%= f.password_field :password, :class => "span2", :placeholder => "Password" %>
+  <%= f.submit 'Sign in', :class => "btn" %>
+<% end %>
