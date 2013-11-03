@@ -4,7 +4,8 @@ ParkerBarker::Application.routes.draw do
 
   ActiveAdmin.routes(self)
 
-  devise_for :users
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
+                     controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 

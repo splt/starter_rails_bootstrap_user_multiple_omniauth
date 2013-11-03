@@ -18,6 +18,9 @@
         <%= link_to new_user_session_path do %>
         	<button class="btn">Login</button>
         <% end %>
+        <%= link_to user_omniauth_authorize_path(:twitter) do %>
+            <button class="btn">Twitter</button>
+        <% end %>
         <% end %>
       </div>
     </li> 

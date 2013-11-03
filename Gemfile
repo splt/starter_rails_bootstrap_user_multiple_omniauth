@@ -10,6 +10,8 @@ gem 'bootstrap-sass', '2.1'
 gem 'pg'
 
 gem 'activeadmin'
+gem 'omniauth-twitter'
+#gem 'omniauth-facebook'
 
 gem 'paperclip'
 gem 'aws-sdk'
