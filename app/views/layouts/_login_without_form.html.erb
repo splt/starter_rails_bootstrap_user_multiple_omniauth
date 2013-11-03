@@ -21,7 +21,14 @@
         <%= link_to user_omniauth_authorize_path(:twitter) do %>
             <button class="btn">Twitter</button>
         <% end %>
+        <%= link_to user_omniauth_authorize_path(:facebook) do %>
+            <button class="btn">Facebook</button>
+        <% end %>
+        <%= link_to user_omniauth_authorize_path(:google_oauth2) do %>
+            <button class="btn">Google</button>
+        <% end %>
         <% end %>
       </div>
     </li> 
   </ul>
+  
